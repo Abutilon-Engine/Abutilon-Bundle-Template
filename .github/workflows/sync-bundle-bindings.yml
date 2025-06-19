@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  update-bindings:
+  sync-bindings:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout with submodules
@@ -19,7 +19,7 @@ jobs:
           git submodule update --remote
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
-          git add Abutilon-Bundle-Bindings
+          git add api
           git commit -m "Updated Abutilon Bundle Bindings"
           git push
         continue-on-error: true

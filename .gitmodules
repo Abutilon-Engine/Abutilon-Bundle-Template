@@ -1,6 +1,3 @@
-[submodule "Abutilon-Bundle-Bindings"]
-	path = Abutilon-Bundle-Bindings
-	url = git@github.com:Abutilon-Engine/Abutilon-Bundle-Bindings.git
 [submodule "api"]
 	path = api
 	url = git@github.com:Abutilon-Engine/Abutilon-Bundle-Bindings.git
