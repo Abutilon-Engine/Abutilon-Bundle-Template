@@ -15,12 +15,16 @@ jobs:
           submodules: true
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Update submodules
+      - name: Update submodules and push
         run: |
           git submodule update --remote
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
+
           git add api
-          git commit -m "Updated Abutilon Bundle Bindings"
-          git push
-        continue-on-error: true
+          git commit -m "Updated Abutilon API Bindings" || echo "No updates to Abutilon API commited"
+
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/Abutilon-Engine/Abutilon-Bundle-Template.git
+
+          git push origin HEAD
+
