@@ -19,7 +19,7 @@ jobs:
           git submodule update --remote
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
-          git add Bundle-Bindings
-          git commit -m "Update Bundle-Bindings"
+          git add Abutilon-Bundle-Bindings
+          git commit -m "Updated Abutilon Bundle Bindings"
           git push
         continue-on-error: true
